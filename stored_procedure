@@ -1,0 +1,9 @@
+CREATE DEFINER=`root`@`localhost` PROCEDURE `consulta`(IN fk_clave CHAR(10))
+BEGIN
+	select concat(p.nombre,' ',p.paterno,' ',p.materno) as nombre_completo,ad.calle ,ad.colonia,ad.numero
+	from persons p
+	inner join addresses ad
+	on p.id = ad.id
+	left join distribuitor as d on d.id = p.fk_clave
+	where d.id = fk_clave;
+END
