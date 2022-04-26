@@ -139,11 +139,11 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(444, 166);
+            this.label8.Location = new System.Drawing.Point(404, 166);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(41, 15);
+            this.label8.Size = new System.Drawing.Size(91, 15);
             this.label8.TabIndex = 10;
-            this.label8.Text = "Fecha:";
+            this.label8.Text = "Fecha Creacion:";
             // 
             // paterno
             // 
@@ -195,6 +195,7 @@
             this.consultar.TabIndex = 17;
             this.consultar.Text = "Consultar";
             this.consultar.UseVisualStyleBackColor = true;
+            this.consultar.Click += new System.EventHandler(this.consultar_Click);
             // 
             // fecha
             // 

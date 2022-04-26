@@ -15,8 +15,8 @@ namespace practicaa2
 
         private void runQuery()
         {
-            string query_person = "insert into persons (nombre,paterno,materno) values ('" + nombre.Text + "','" + paterno.Text + "','" + materno.Text + "');";
-            string query_address = "insert into addresses (calle,colonia,numero) values ('" + calle.Text + "','" + colonia.Text + "','" + numero.Text + "');";
+            string query_person = "insert into persons (nombre,paterno,materno,fk_clave) values ('" + nombre.Text + "','" + paterno.Text + "','" + materno.Text + "','" + clave.Text + "');";
+            string query_address = "insert into addresses (calle,colonia,numero,fk_clave) values ('" + calle.Text + "','" + colonia.Text + "','" + numero.Text + "','" + clave.Text + "');";
             string query_distributor = "insert into distribuitor (id,fecha_reg) values ('" + clave.Text + "','" + fecha.Text + "');";
             string MySQLConnectionString = "server = 127.0.0.1;port=3306; username = root; password = ; database = practica2";
 
@@ -57,6 +57,13 @@ namespace practicaa2
             {
                 MessageBox.Show("Query error" + ex.Message);
             }
+        }
+
+        private void consultar_Click(object sender, EventArgs e)
+        {
+            Form2 f = new Form2();
+            f.Visible = true;
+            //this.Dispose(false);
         }
     }
 }
